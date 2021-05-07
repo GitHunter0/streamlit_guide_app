@@ -10,7 +10,7 @@ if False:
     !conda install --channel=conda-forge streamlit
     !python -m pip install --upgrade streamlit-ace streamlit-tags
     !python -m pip install --upgrade numpy pandas scipy openpyxl
-    !python -m pip install --upgrade plotnine plotly kaleido scikit-misc statsmodels
+    !python -m pip install --upgrade plotnine plotly kaleido
     '''
 
 
@@ -20,8 +20,8 @@ if False:
 import streamlit as st
 import pandas as pd
 import numpy as np
-# 'skmisc' refers to 'scikit-misc' module
-import scipy, skmisc, statsmodels, openpyxl # accessories
+#
+import scipy, statsmodels, openpyxl # accessories
 import datetime, re # deal with date/time and regex
 import plotnine, plotly, kaleido # plotting modules
 #
@@ -87,6 +87,7 @@ import pages.selectors_sliders_chain
 import pages.plots_color_picker
 import pages.layout
 import pages.text_tag_inputs
+import pages.forms
 
 
 # Create dictionary with the imported pages
@@ -101,6 +102,7 @@ PAGES = {
     "Sliders": pages.sliders,
     "Chain of Selectors and Sliders": pages.selectors_sliders_chain,
     "Text & Tag Inputs": pages.text_tag_inputs,
+    "Forms": pages.forms,
     "Other Input Types": pages.other_inputs,
     "Plots & Color Picker": pages.plots_color_picker,
     "Maps": pages.maps,
@@ -109,8 +111,8 @@ PAGES = {
     "URL Links": pages.url_links,
     "Download Button": pages.download_button,
     "Upload Files": pages.uploads,
-    "Control Flow":pages.control_flow,
-    "Spinner":pages.spinner,
+    "Control Flow": pages.control_flow,
+    "Spinner": pages.spinner,
     "Multipage App via Radio Button": pages.multipage_app_with_radio_button,
     "Custom Functions": pages.import_custom_functions,
     "Functions with Streamlit Elements": pages.functions_with_st_elements,
