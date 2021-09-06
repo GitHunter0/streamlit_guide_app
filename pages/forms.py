@@ -45,7 +45,7 @@ def main():
     # -----------------------------------------------
     with st.echo():
         st.subheader("Example 3: Forms inside columns")
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
 
         with col1:
             with st.form('Form3a'):
@@ -68,7 +68,7 @@ def main():
         st.subheader("Example 4: Columns inside forms")
 
         with st.form('form4'):
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
             flavor_selec = col1.selectbox('Select flavor', 
                                           ['Vanilla', 'Chocolate'])
             intensity_selec = col2.slider(label='Select Intensity', 

@@ -5,8 +5,28 @@ def main():
     with st.echo():                                     
     
         import streamlit as st
-    
-        st.header("Create Download Link Button")
+        
+#%% -------------------------------------------------
+        st.header("Download Button (Streamlit >= 0.88.0)")
+        file_name = "table_test.xlsx"
+        file_path = f"./{file_name}"
+        file_bytes = open(file_path, 'rb')
+        st.download_button(label="Click to download the file 1",
+                            data=file_bytes, 
+                            file_name=file_name,
+                            key='download1')
+        file_bytes.close()
+        # or
+        file_name = "table_test.xlsx"
+        file_path = f"./{file_name}"
+        with open(file_path, 'rb') as file_bytes:
+            st.download_button(label="Click to download the file 2",
+                               data=file_bytes, 
+                               file_name=file_name,
+                               key='download2')
+        
+#%% --------------------------------------------------
+        st.header("Create Download Link Button (Streamlit <=0.88.0")
 
         import pandas as pd
         import numpy as np

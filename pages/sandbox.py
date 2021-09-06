@@ -36,7 +36,7 @@ def main():
 
     KEYBINDINGS = ["emacs", "sublime", "vim", "vscode"]
 
-    display, editor = st.beta_columns((2, 2))
+    display, editor = st.columns((2, 2))
 
     INITIAL_CODE = """
 st.subheader("**_A quick and easy way to test your code_**")    

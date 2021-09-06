@@ -1,7 +1,7 @@
 numpy==1.20.2
 pandas==1.2.4
 scipy==1.6.2
-streamlit==0.81.1
+streamlit==0.88.0
 streamlit-ace==0.0.4
 streamlit-tags==1.2.1
 openpyxl==3.0.7

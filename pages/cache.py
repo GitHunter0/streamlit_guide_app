@@ -11,7 +11,7 @@ def main():
         st.info("Use st.cache() to speed up loading time of functions with expensive computation")
         
         import time
-        @st.cache(suppress_st_warning=True)  # 👈 Changed this
+        @st.cache(suppress_st_warning=True, ttl=None)  # 👈 Changed this
         def expensive_computation(a, b):
             # 👇 Added this
             st.write("Cache miss: expensive_computation(", a, ",", b, ") ran")

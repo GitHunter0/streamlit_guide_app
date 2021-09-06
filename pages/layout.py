@@ -56,7 +56,7 @@ def main():
         st.write("Divide page to 3 columns (col1 = sidebar, col2 and col3 = page contents)")
         col1 = st.sidebar
         # col2 will have width=2 and col1, width=1
-        col2, col3 = st.beta_columns((2,1))
+        col2, col3 = st.columns((2,1))
         # Add some text to the columns
         col1.header("Column 1 (Sidebar)")
         col2.write("Column 2")
@@ -78,7 +78,7 @@ def main():
         
         st.write("Create 3 columns and just use column 2 (the middle one)")           
         
-        col1, col2, col3 = st.beta_columns([2, 2, 2])
+        col1, col2, col3 = st.columns([2, 2, 2])
 
         col2.title("Centered Text")     
         

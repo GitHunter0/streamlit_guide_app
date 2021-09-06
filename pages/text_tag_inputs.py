@@ -23,7 +23,7 @@ def main():
     with st.echo():        
         # TEXT INPUT - side-by-side Layout -------------------------------
         st.header("TEXT INPUT: Side by Side Layout")
-        col2, col3 = st.beta_columns([1,1])
+        col2, col3 = st.columns([1,1])
         keyword1_selec = col2.text_input(label="Keyword 1")
         keyword2_selec = col3.text_input(label="Keyword 2")
         st.write(keyword1_selec) 

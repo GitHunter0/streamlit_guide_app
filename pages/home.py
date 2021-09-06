@@ -8,13 +8,13 @@ def main():
     import PIL
     
     # Trick to get CENTERED ALIGNMENT 
-    col1, col2, col3 = st.beta_columns([0.5,6,0.5])
+    col1, col2, col3 = st.columns([0.5,6,0.5])
     col2.title("STREAMLIT DEMONSTRATION WEB APP")
 
     image = PIL.Image.open("Streamlit_Logo_1.jpg")
     st.image(image, use_column_width=True, caption=None)
     
-    col1, col2, col3 = st.beta_columns([0.5,6,0.5])
+    col1, col2, col3 = st.columns([0.5,6,0.5])
     col2.write(""" 
     # Reference Guide to Build a Streamlit App
     """)
